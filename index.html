@@ -7,9 +7,11 @@
 </head>
 <body>
 <h1>MTA Journey Planner</h1>
+<p>Please select your start and end stations.</p>
 
 <!-- starting station -->
 <select id='startList'>
+  <option value="" disabled selected>Start station</option>
   <optgroup label="N Line">
     <option value="times-square">Times Square</option>
     <option value="34thN">34th</option>
@@ -20,21 +22,29 @@
   </optgroup>
 
   <optgroup label="L Line">
-
-    8th, 6th, Union Square, 3rd, and 1st
     <option value="8thL">8th</option>
     <option value="6thL">6th</option>
     <option value="union-square">Union Square</option>
     <option value="3rdL">3rd</option>
     <option value="1stL">1st</option>
+  </optgroup>
+
+  <optgroup label="6 Line">
+    <option value="grand-central6">Grand Central</option>
+    <option value="33rd6">33rd</option>
+    <option value="28th6">28th</option>
+    <option value="23rd6">23rd</option>
+    <option value="union-square">Union Square</option>
+    <option value="astor-place6">Astor Place</option>
   </optgroup>
 
 </select>
 
 <!-- destination -->
 <select id='endList'>
+  <option value="" disabled selected>End station</option>
   <optgroup label="N Line">
-    <option value="times-square">Times Square</option>
+    <option value="times-squareN">Times Square</option>
     <option value="34thN">34th</option>
     <option value="28thN">28th</option>
     <option value="23rdN">23rd</option>
@@ -43,7 +53,6 @@
   </optgroup>
 
   <optgroup label="L Line">
-    8th, 6th, Union Square, 3rd, and 1st
     <option value="8thL">8th</option>
     <option value="6thL">6th</option>
     <option value="union-square">Union Square</option>
@@ -51,9 +60,19 @@
     <option value="1stL">1st</option>
   </optgroup>
 
+  <optgroup label="6 Line">
+    <option value="grand-central6">Grand Central</option>
+    <option value="33rd6">33rd</option>
+    <option value="28th6">28th</option>
+    <option value="23rd6">23rd</option>
+    <option value="union-square">Union Square</option>
+    <option value="astor-place6">Astor Place</option>
+  </optgroup>
+
 </select>
 
 <button name="button" id='calcButton'>Plan my journey</button>
+<div><p id='message'></p></div>
 
 </body>
 </html>
